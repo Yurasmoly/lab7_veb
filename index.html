@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фан-сайт Леді Гаги</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Фан-сторінка Леді Гаги</h1>
+    </header>
+
+    <main class="container">
+
+        <div id="main-tabs">
+            <ul>
+                <li><a href="#tab-bio">Біографія</a></li>
+                <li><a href="#tab-disco">Дискографія</a></li>
+                <li><a href="#tab-gallery">Галерея</a></li>
+                <li><a href="#tab-tour">Концерти</a></li>
+            </ul>
+
+            <div id="tab-bio">
+                 <div class="bio-content"> <div class="bio-image"> <img src="images/gaga_bio.jpg" alt="Леді Гага">
+                    </div>
+                    <div class="bio-text"> <h2>Біографія</h2>
+                        <p>Сте́фані Джоа́нн Анджелі́на Джермано́тта (англ. Stefani Joanne Angelina Germanotta; нар. 28 березня 1986, Нью-Йорк), відоміша як Ле́ді Га́га (англ. Lady Gaga) — американська співачка, авторка пісень, продюсерка, філантропка, дизайнерка та акторка.</p>
+                        <p>Вона починала свою кар'єру в клубах Нью-Йорка, а всесвітню славу здобула 2008 року з виходом альбому "The Fame".</p>
+                    </div>
+                </div> <h2>Цікаві факти (Акордеон)</h2>
+                <div id="facts-accordion">
+                    <h3>Ранні роки</h3>
+                    <div>
+                        <p>Леді Гага навчилася грати на піаніно у віці 4 років.</p>
+                    </div>
+                    <h3>Нагороди</h3>
+                    <div>
+                        <p>Вона є однією з найбільш продаваних музиканток усіх часів і отримала численні нагороди, включаючи Греммі та Оскар.</p>
+                    </div>
+                    <h3>Стиль</h3>
+                    <div>
+                        <p>Відома своїми епатажними та екстравагантними образами.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-disco">
+                <h2>Студійні альбоми (Карусель)</h2>
+
+                <div class="owl-carousel owl-theme album-carousel">
+                    <div class="item album">
+                        <img src="images/album_the_fame.jpg" alt="The Fame">
+                        <h4>The Fame (2008)</h4>
+                        <p>Дебютний альбом</p>
+                    </div>
+                    <div class="item album">
+                        <img src="images/album_born_this_way.jpg" alt="Born This Way">
+                        <h4>Born This Way (2011)</h4>
+                        <p>Другий студійний альбом</p>
+                    </div>
+                    <div class="item album">
+                        <img src="images/album_artpop.jpg" alt="Artpop">
+                        <h4>Artpop (2013)</h4>
+                        <p>Експериментальний альбом</p>
+                    </div>
+                    <div class="item album">
+                        <img src="images/album_joanne.jpg" alt="Joanne">
+                        <h4>Joanne (2016)</h4>
+                        <p>Більш особистий альбом</p>
+                    </div>
+                    <div class="item album">
+                        <img src="images/album_chromatica.jpg" alt="Chromatica">
+                        <h4>Chromatica (2020)</h4>
+                        <p>Повернення до денс-попу</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-gallery">
+                <h2>Фотогалерея</h2>
+                <p>Натисніть на будь-яке фото, щоб відкрити галерею.</p>
+                <div class="popup-gallery">
+                    <a href="images/gaga1.jpg" title="Образ 1"><img src="images/gaga1.jpg" width="150" height="150"></a>
+                    <a href="images/gaga2.jpg" title="Образ 2"><img src="images/gaga2.jpg" width="150" height="150"></a>
+                    <a href="images/gaga3.jpg" title="Образ 3"><img src="images/gaga3.jpg" width="150" height="150"></a>
+                    <a href="images/gaga4.jpg" title="Образ 4"><img src="images/gaga4.jpg" width="150" height="150"></a>
+                </div>
+            </div>
+
+            <div id="tab-tour">
+                <h2>Найближчі концерти</h2>
+                <p>Оберіть дату, щоб дізнатися про наявність квитків:</p>
+                <div id="datepicker-inline"></div>
+            </div>
+
+        </div> </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+
+        // Ініціалізація jQuery UI Tabs
+        $( "#main-tabs" ).tabs();
+
+        // Ініціалізація jQuery UI Accordion
+        $( "#facts-accordion" ).accordion({ // Змінено ID з album-accordion
+            heightStyle: "content"
+        });
+
+        // Ініціалізація jQuery UI Datepicker
+        $( "#datepicker-inline" ).datepicker();
+
+        // Ініціалізація Magnific Popup
+        $('.popup-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+                enabled: true
+            },
+            image: {
+                titleSrc: 'title'
+            }
+        });
+
+        // Ініціалізація Owl Carousel для альбомів
+        $('.album-carousel').owlCarousel({
+            loop: true,       // Зациклити карусель
+            margin: 20,       // Відступ між елементами
+            nav: true,        // Показати стрілки навігації
+            dots: false,      // Сховати точки навігації
+            responsive:{      // Адаптивність: кількість елементів на різних екранах
+                0:{           // Мобільні
+                    items: 1
+                },
+                600:{         // Планшети
+                    items: 2
+                },
+                1000:{        // Десктопи
+                    items: 3
+                }
+            }
+        });
+
+    });
+    </script>
+
+</body>
+</html>
