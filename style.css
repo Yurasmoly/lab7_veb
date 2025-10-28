@@ -1,0 +1,131 @@
+/* --- Google Font --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* --- Загальні стилі --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f8;
+    color: #444;
+    line-height: 1.7;
+    margin: 0;
+}
+
+header {
+    background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+    color: #fff;
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+h1 { margin: 0; font-size: 2.8em; font-weight: 600; }
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+h2 {
+    border-bottom: 3px solid #e8e8e8;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    color: #d41c5c;
+    font-weight: 600;
+}
+
+hr { border: none; height: 1px; background-color: #e0e0e0; margin: 30px 0; }
+ul { padding-left: 25px; }
+
+/* --- jQuery UI Tabs --- */
+.ui-tabs { border: none; padding: 0; }
+.ui-tabs .ui-tabs-nav {
+    background: none; border: none; padding: 0 0 1px 0;
+    border-bottom: 1px solid #ddd; margin-bottom: 20px;
+}
+.ui-tabs .ui-tabs-nav li {
+    background: #f9f9f9; border: 1px solid #ddd; border-bottom: none;
+    margin-right: 5px; border-radius: 8px 8px 0 0;
+    transition: background-color 0.2s ease;
+}
+.ui-tabs .ui-tabs-nav li a { color: #555; padding: 10px 20px; }
+.ui-tabs .ui-tabs-nav li:not(.ui-tabs-active):hover { background: #eee; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-active { background: #d41c5c; border-color: #d41c5c; padding-bottom: 1px; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a { color: #fff; font-weight: 600; }
+.ui-tabs .ui-tabs-panel { background: none; border: none; padding: 0; }
+
+/* --- jQuery UI Accordion --- */
+#facts-accordion { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }
+.ui-accordion .ui-accordion-header {
+    background: #f7f7f7; color: #333; border: none; border-bottom: 1px solid #ddd;
+    padding: 12px 15px; font-weight: 600; transition: background-color 0.2s ease;
+    margin: 0 !important; border-radius: 0 !important;
+}
+.ui-accordion .ui-accordion-header .ui-icon { display: none; }
+.ui-accordion .ui-accordion-header::before {
+    content: '+'; float: right; margin-left: 10px; font-weight: bold;
+    color: #aaa; transition: transform 0.2s ease;
+}
+.ui-accordion .ui-accordion-header.ui-state-active::before { content: '−'; transform: rotate(180deg); color: #d41c5c; }
+.ui-accordion .ui-accordion-header:hover { background: #eee; }
+.ui-accordion .ui-accordion-header.ui-state-active { background: #fff; color: #d41c5c; }
+.ui-accordion .ui-accordion-content { background: #fff; border: none; padding: 15px; }
+.ui-accordion .ui-accordion-content p:first-child { margin-top: 0; }
+
+/* --- Magnific Popup Gallery --- */
+.popup-gallery img {
+    border: none; border-radius: 8px; margin: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+.popup-gallery img:hover { transform: scale(1.08); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+
+/* --- Owl Carousel --- */
+.album-carousel .item.album {
+    text-align: center; border: none; padding: 15px; border-radius: 8px; background: #fff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08); transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.album-carousel .item.album:hover { transform: translateY(-5px); box-shadow: 0 6px 15px rgba(0,0,0,0.12); }
+.album-carousel .item.album img {
+    max-width: 100%; height: auto; max-height: 180px; margin-bottom: 15px;
+    display: inline-block; border-radius: 5px;
+}
+.album-carousel .item.album h4 { font-size: 1.1em; margin-bottom: 5px; color: #333; font-weight: 600; }
+.album-carousel .item.album p { font-size: 0.9em; color: #777; }
+.owl-carousel .owl-dots { display: none; }
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    font-size: 2.5em !important; color: #d41c5c !important; background: rgba(255, 255, 255, 0.8) !important;
+    border-radius: 50% !important; width: 45px; height: 45px; line-height: 40px !important;
+    position: absolute; top: 40%; transform: translateY(-50%); margin: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15); transition: background-color 0.2s ease, color 0.2s ease;
+}
+.owl-carousel .owl-nav button.owl-prev { left: -20px; }
+.owl-carousel .owl-nav button.owl-next { right: -20px; }
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover { background: #d41c5c !important; color: #fff !important; }
+
+/* --- Біографія --- */
+.bio-content { display: flex; align-items: flex-start; gap: 30px; margin-bottom: 30px; }
+.bio-image { flex: 0 0 35%; max-width: 300px; }
+.bio-image img { width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: block; }
+.bio-text { flex: 1 1 65%; }
+
+@media (max-width: 768px) {
+    .bio-content { flex-direction: column; align-items: center; gap: 20px; }
+    .bio-image { max-width: 80%; margin-bottom: 15px; }
+    .bio-text { text-align: center; }
+    .bio-text h2 { text-align: left; }
+}
+
+/* --- Інші стилі --- */
+.note {
+    background-color: #eef2f7; border: 1px solid #d0d9e3; padding: 15px;
+    border-radius: 8px; margin-top: 20px; font-size: 0.9em; color: #555;
+}
+.note b { color: #333; }
